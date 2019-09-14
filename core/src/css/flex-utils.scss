@@ -1,0 +1,119 @@
+// Flex Utilities
+// --------------------------------------------------
+// Creates flex classes to align flex containers
+// and items
+
+// Align Self
+// --------------------------------------------------
+
+.devto-align-self-start,
+[align-self-start] {
+  align-self: flex-start !important;
+}
+
+.devto-align-self-end,
+[align-self-end] {
+  align-self: flex-end !important;
+}
+
+.devto-align-self-center,
+[align-self-center] {
+  align-self: center !important;
+}
+
+.devto-align-self-stretch,
+[align-self-stretch] {
+  align-self: stretch !important;
+}
+
+.devto-align-self-baseline,
+[align-self-baseline] {
+  align-self: baseline !important;
+}
+
+.devto-align-self-auto,
+[align-self-auto] {
+  align-self: auto !important;
+}
+
+
+// Flex Wrap
+// --------------------------------------------------
+
+.devto-wrap,
+[wrap] {
+  flex-wrap: wrap !important;
+}
+
+.devto-nowrap,
+[nowrap] {
+  flex-wrap: nowrap !important;
+}
+
+.devto-wrap-reverse,
+[wrap-reverse] {
+  flex-wrap: wrap-reverse !important;
+}
+
+
+// Justify Content
+// --------------------------------------------------
+
+.devto-justify-content-start,
+[justify-content-start] {
+  justify-content: flex-start !important;
+}
+
+.devto-justify-content-center,
+[justify-content-center] {
+  justify-content: center !important;
+}
+
+.devto-justify-content-end,
+[justify-content-end] {
+  justify-content: flex-end !important;
+}
+
+.devto-justify-content-around,
+[justify-content-around] {
+  justify-content: space-around !important;
+}
+
+.devto-justify-content-between,
+[justify-content-between] {
+  justify-content: space-between !important;
+}
+
+.devto-justify-content-evenly,
+[justify-content-evenly] {
+  justify-content: space-evenly !important;
+}
+
+
+// Align Items
+// --------------------------------------------------
+
+.devto-align-items-start,
+[align-items-start] {
+  align-items: flex-start !important;
+}
+
+.devto-align-items-center,
+[align-items-center] {
+  align-items: center !important;
+}
+
+.devto-align-items-end,
+[align-items-end] {
+  align-items: flex-end !important;
+}
+
+.devto-align-items-stretch,
+[align-items-stretch] {
+  align-items: stretch !important;
+}
+
+.devto-align-items-baseline,
+[align-items-baseline] {
+  align-items: baseline !important;
+}

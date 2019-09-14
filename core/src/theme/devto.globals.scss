@@ -1,0 +1,29 @@
+
+// Global Utility Functions
+@import "./devto.functions.string";
+
+// Global Color Functions
+@import "./devto.functions.color";
+
+// Global Mixins
+@import "./devto.mixins";
+
+// Colors
+@import "./devto.colors";
+
+// Default General
+// --------------------------------------------------
+$font-family-base:                  var(--devto-font-family, inherit) !default;
+
+// Global font path
+$font-path: "/dist/fonts" !default;
+
+// The minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries
+$screen-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;

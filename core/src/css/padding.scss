@@ -1,0 +1,146 @@
+@import "../theme/devto.globals";
+@import "../theme/devto.mixins";
+
+
+// Element Space
+// --------------------------------------------------
+// Creates padding and margin attributes to be used on
+// any element
+
+$padding: var(--devto-padding, 16px);
+$margin: var(--devto-margin, 16px);
+
+// Padding
+// --------------------------------------------------
+
+.devto-no-padding,
+[no-padding] {
+  --padding-start: 0;
+  --padding-end: 0;
+  --padding-top: 0;
+  --padding-bottom: 0;
+
+  @include padding(0);
+}
+
+.devto-padding,
+[padding] {
+  --padding-start: #{$padding};
+  --padding-end: #{$padding};
+  --padding-top: #{$padding};
+  --padding-bottom: #{$padding};
+
+  @include padding($padding);
+}
+
+.devto-padding-top,
+[padding-top] {
+  --padding-top: #{$padding};
+
+  @include padding($padding, null, null, null);
+}
+
+.devto-padding-start,
+[padding-start] {
+  --padding-start: #{$padding};
+
+  @include padding-horizontal($padding, null);
+}
+
+.devto-padding-end,
+[padding-end] {
+  --padding-end: #{$padding};
+
+  @include padding-horizontal(null, $padding);
+}
+
+.devto-padding-bottom,
+[padding-bottom] {
+  --padding-bottom: #{$padding};
+
+  @include padding(null, null, $padding, null);
+}
+
+.devto-padding-vertical,
+[padding-vertical] {
+  --padding-top: #{$padding};
+  --padding-bottom: #{$padding};
+
+  @include padding($padding, null, $padding, null);
+}
+
+.devto-padding-horizontal,
+[padding-horizontal] {
+  --padding-start: #{$padding};
+  --padding-end: #{$padding};
+
+  @include padding-horizontal($padding);
+}
+
+
+// Margin
+// --------------------------------------------------
+
+.devto-no-margin,
+[no-margin] {
+  --margin-start: 0;
+  --margin-end: 0;
+  --margin-top: 0;
+  --margin-bottom: 0;
+
+  @include margin(0);
+}
+
+.devto-margin,
+[margin] {
+  --margin-start: #{$margin};
+  --margin-end: #{$margin};
+  --margin-top: #{$margin};
+  --margin-bottom: #{$margin};
+
+  @include margin($margin);
+}
+
+.devto-margin-top,
+[margin-top] {
+  --margin-top: #{$margin};
+
+  @include margin($margin, null, null, null);
+}
+
+.devto-margin-start,
+[margin-start] {
+  --margin-start: #{$margin};
+
+  @include margin-horizontal($margin, null);
+}
+
+.devto-margin-end,
+[margin-end] {
+  --margin-end: #{$margin};
+
+  @include margin-horizontal(null, $margin);
+}
+
+.devto-margin-bottom,
+[margin-bottom] {
+  --margin-bottom: #{$margin};
+
+  @include margin(null, null, $margin, null);
+}
+
+.devto-margin-vertical,
+[margin-vertical] {
+  --margin-top: #{$margin};
+  --margin-bottom: #{$margin};
+
+  @include margin($margin, null, $margin, null);
+}
+
+.devto-margin-horizontal,
+[margin-horizontal] {
+  --margin-start: #{$margin};
+  --margin-end: #{$margin};
+
+  @include margin-horizontal($margin);
+}

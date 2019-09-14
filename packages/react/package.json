@@ -1,0 +1,50 @@
+{
+  "name": "devto-react",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "npm run clean && npm run copy && npm run compile",
+    "clean": "rm -rf dist && rm -rf dist-transpiled",
+    "compile": "npm run tsc && rollup -c",
+    "lint": "tslint --project .",
+    "lint.fix": "tslint --project . --fix",
+    "tsc": "tsc -p .",
+    "copy": "node scripts/copy.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist/",
+    "css/"
+  ],
+  "dependencies": {
+    "devto-core": "file:../../core",
+    "tslib": "^1.10.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@types/node": "10.12.9",
+    "@types/react": "^16.9.1",
+    "@types/react-dom": "^16.8.5",
+    "fs-extra": "^8.1.0",
+    "jest-dom": "^3.4.0",
+    "np": "^5.0.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-testing-library": "^7.0.0",
+    "rollup": "^1.18.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-virtual": "^1.0.1",
+    "tslint": "^5.18.0",
+    "tslint-ionic-rules": "0.0.21",
+    "tslint-react": "^4.0.0",
+    "typescript": "3.5.3"
+  }
+}

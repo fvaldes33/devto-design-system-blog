@@ -1,0 +1,39 @@
+{
+  "name": "devto-core",
+  "version": "0.0.1",
+  "description": "Stencil Component Starter",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/core/core.js",
+  "files": [
+    "dist/",
+    "css/",
+    "loader/"
+  ],
+  "scripts": {
+    "start": "npm run build.css && stencil build --dev --watch --serve",
+    "build.all": "npm run clean && npm run build.css && npm run build.stencil && npm run build.stencil -- --docs",
+    "build.css": "npm run css.sass && npm run css.minify",
+    "build.stencil": "stencil build --prod",
+    "clean": "node scripts/clean.js",
+    "css.minify": "cleancss -O2 -o ./css/devto.bundle.css ./css/devto.bundle.css",
+    "css.sass": "sass src/css:./css",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
+  },
+  "devDependencies": {
+    "@stencil/core": "^1.3.3",
+    "@stencil/sass": "^1.0.1",
+    "clean-css-cli": "^4.3.0",
+    "fs-extra": "^8.1.0",
+    "sass": "^1.22.12"
+  },
+  "license": "MIT",
+  "dependencies": {}
+}

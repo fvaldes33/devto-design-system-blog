@@ -1,0 +1,54 @@
+@import "../theme/devto.globals";
+@import "../theme/devto.mixins";
+
+// Text Alignment
+// --------------------------------------------------
+// Creates text alignment attributes based on screen size
+
+@each $breakpoint in map-keys($screen-breakpoints) {
+  $infix: breakpoint-infix($breakpoint, $screen-breakpoints);
+
+  @include media-breakpoint-up($breakpoint, $screen-breakpoints) {
+    // Provide `[text-{bp}]` attributes for aligning the text based
+    // on the breakpoint
+    .devto-text#{$infix}-center,
+    [text#{$infix}-center] {
+      text-align: center !important;
+    }
+
+    .devto-text#{$infix}-justify,
+    [text#{$infix}-justify] {
+      text-align: justify !important;
+    }
+
+    .devto-text#{$infix}-start,
+    [text#{$infix}-start] {
+      text-align: start !important;
+    }
+
+    .devto-text#{$infix}-end,
+    [text#{$infix}-end] {
+      text-align: end !important;
+    }
+
+    .devto-text#{$infix}-left,
+    [text#{$infix}-left] {
+      text-align: left !important;
+    }
+
+    .devto-text#{$infix}-right,
+    [text#{$infix}-right] {
+      text-align: right !important;
+    }
+
+    .devto-text#{$infix}-nowrap,
+    [text#{$infix}-nowrap] {
+      white-space: nowrap !important;
+    }
+
+    .devto-text#{$infix}-wrap,
+    [text#{$infix}-wrap] {
+      white-space: normal !important;
+    }
+  }
+}
